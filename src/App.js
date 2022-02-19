@@ -58,9 +58,9 @@ function DropdownMenu() {
     setMenuHeight(dropdownRef.current?.firstChild.offsetHeight);
   }, []);
 
-  useEffect(() => {
-    console.log(menuHeight);
-  }, [menuHeight]);
+  // useEffect(() => {
+  //   console.log(menuHeight);
+  // }, [menuHeight]);
 
   function calcHeight(el) {
     const height = el.offsetHeight;
@@ -78,7 +78,7 @@ function DropdownMenu() {
   }
 
   return (
-    <div className="dropdown" stlye={{height: menuHeight}} ref={dropdownRef}>
+    <div className="dropdown" style={{height: menuHeight}} ref={dropdownRef}>
       <CSSTransition key={1} in={activeMenu === 'main'} unmountOnExit timeout={500} classNames="menu-primary" onEnter={calcHeight}>
         <div className="menu">
           <DropDownItem>My Profile</DropDownItem>
