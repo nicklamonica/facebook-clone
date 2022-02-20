@@ -1,0 +1,31 @@
+/* <nav> */
+.navbar {
+    height: var(--nav-size);
+    background-color: var(--bg);
+    padding: 0 1rem;
+    border-bottom: var(--border);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* ul */
+  .navbar-right {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .navbar-center {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar-left {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
