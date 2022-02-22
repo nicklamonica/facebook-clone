@@ -4,28 +4,27 @@
     background-color: var(--bg);
     padding: 0 1rem;
     border-bottom: var(--border);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: .66fr auto .66fr;
   }
   
-  /* ul */
-  .navbar-right {
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .navbar-center {
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .navbar-left {
-    max-width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
+/* ul */
+.navbar-right {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar-center {
+  width: calc(100vw * 0.4);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-left {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

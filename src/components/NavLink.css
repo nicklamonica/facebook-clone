@@ -1,0 +1,34 @@
+/* <li> */
+.nav-link {
+    width: calc(var(--nav-size) * 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5rem;
+}
+  
+/* for link button */
+.link-button {
+    --button-height: calc(var(--nav-size) * 0.4);
+    --button-width: calc(var(--nav-size) * 0.45);
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: #484a4d;
+    border-radius: 10%;
+    padding: 15px calc(var(--button-width) * 1.5 );
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 300ms;
+}
+
+.link-button:hover {
+    filter: brightness(1.2);
+}
+
+.link-button svg { 
+    fill: var(--text-color);
+    width: 72px;
+    height: 48px;
+}
