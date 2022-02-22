@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
+import useOutsideAlerter from '../hooks/useOutsideAlerter';
 import { ReactComponent as ArrowIcon } from '../icons/arrow.svg';
 import { ReactComponent as CogIcon } from '../icons/cog.svg';
 import { ReactComponent as ChevronIcon } from '../icons/chevron.svg';
@@ -8,11 +9,12 @@ import { ReactComponent as ChevronIcon } from '../icons/chevron.svg';
 import './DropDownMenu.css';
 
 
-export function DropdownMenu() {
+export function DropdownMenu(props) {
 
     const [ activeMenu, setActiveMenu ] = useState('main');
     const [ menuHeight, setMenuHeight ] = useState(null);
     const dropdownRef = useRef(null);
+    useOutsideAlerter(dropdownRef, props.onClickOff);
   
     useEffect(() => {
       setMenuHeight(dropdownRef.current?.firstChild.offsetHeight);

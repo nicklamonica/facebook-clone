@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './NavItem.css';
 
+import { DropdownMenu } from './DropDownMenu';
 
 
 export function NavItem(props) {
@@ -11,6 +12,6 @@ export function NavItem(props) {
       <a href="#" className="icon-button" onClick={()=> setOpen(!open)}>
         {props.icon}
       </a>
-      {open && props.children}
+      {open && props.hasDropdown && <DropdownMenu onClickOff={() => setOpen(false)}/>}
     </li>)
   }

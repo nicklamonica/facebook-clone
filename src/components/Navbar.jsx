@@ -1,6 +1,5 @@
 import { NavItem } from './NavItem';
 import { NavLink } from './NavLink';
-import { DropdownMenu } from './DropDownMenu';
 
 
 import { ReactComponent as BellIcon } from '../icons/bell.svg';
@@ -32,9 +31,7 @@ export function Navbar(props) {
         <NavItem icon={<PlusIcon/>}/>
         <NavItem icon={<BellIcon/>}/>
         <NavItem icon={<MessengerIcon/>}/>
-        <NavItem icon={<CaretIcon/>}>
-          <DropdownMenu />
-        </NavItem>
+        <NavItem icon={<CaretIcon/>} hasDropdown={true}/>
       </ul>
     </nav> );
   }
